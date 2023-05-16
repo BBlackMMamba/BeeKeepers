@@ -1,0 +1,169 @@
+:root{
+    --backgroundColor: #212121;
+    --blackForHive: #232B2B;
+    --darkGreyForHive: #333333;
+    --darkBrownGrey: #3B3131;
+    --yellowForHive:#FFC24B;
+    --yellowForFont:#ffd700;
+    --greyForFont:#EAEAEA;
+    --whiteForFont:#fefefa;
+    --whitePure: #ffffff;
+    --ifNeedGreen: #70AD47;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "hero hero hero hero hero hero hero hero hero hero hero hero"
+        "ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct"
+        "honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes"
+        "testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials"
+        "orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+/* HEADER STYLING */
+
+header{
+    grid-area: header;
+    position: relative;
+    background-color: transparent;
+    width:100%;
+    padding:1% 2%;
+    z-index: 1;
+}
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+
+
+/* LOGO */
+.logo-container{
+    cursor: pointer;
+    width: 30%;
+    height: 75px;
+}
+.logo-letter{
+     font-family: 'Branch';
+     color:var(--greyForFont);
+     font-size: 2rem;
+     font-weight: 900;
+}
+
+.logo-letter:hover{
+    
+}
+
+/* MENU */
+
+nav{}
+.main-menu{
+    display: flex;
+    flex-direction: row;
+}
+.main-menu_items{}
+.main-menu__item{
+    font-family: 'Muller Thin DEMO';
+    color:var(--greyForFont);
+    font-size:1.5rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
+}
+
+.main-menu__item:hover{
+    color: var(--yellowForFont);
+}
+
+/* HERO SECTION*/
+
+.hero{
+    grid-area: hero;
+    width:100%;
+    height:100vh;
+    position: absolute;
+    background-color: var(--backgroundColor);
+    
+}
+
+.hero-image{
+    position: absolute;
+    width:569px;
+    height:650px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.hex-row {
+    display: inline-flex;
+    margin-top: -1.75rem;
+    margin-left: -3.05rem;
+}
+
+.hexagon {
+    position: relative;
+    background: rgb(16, 14, 14);
+    width: 6.25rem;
+    height: 6.875rem;
+    margin: 0.063rem;
+    transition: 2s;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon:hover {
+    background: #FFC24B;
+    transition: 0s;
+}
+
+.hex-row:nth-child(even) {
+    margin-left: 0.063rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OUR PRODUCT */
+
+.ourProduct {
+  grid-area: ourProduct;
+}
+
+.honeyTypes {
+  grid-area: honeyTypes;
+}
+
+.testimonials {
+  grid-area: testimonials;
+}
+
+.orderNow {
+  grid-area: orderNow;
+}
+
+.footer {
+  grid-area: footer;
+}
