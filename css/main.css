@@ -1,160 +1,384 @@
-:root{
-    --backgroundColor: #212121;
-    --blackForHive: #232B2B;
-    --darkGreyForHive: #333333;
-    --darkBrownGrey: #3B3131;
-    --yellowForHive:#FFC24B;
-    --yellowForFont:#ffd700;
-    --greyForFont:#EAEAEA;
-    --whiteForFont:#fefefa;
-    --whitePure: #ffffff;
-    --ifNeedGreen: #70AD47;
+:root {
+  --darkestBackground: black;
+  --backgroundColor: #212121;
+  --blackForHive: #232B2B;
+  --darkGreyForHive: #333333;
+  --darkBrownGrey: #3B3131;
+  --yellowForHive: #FFC24B;
+  --yellowForFont: #ffd700;
+  --greyForFont: #EAEAEA;
+  --whiteForFont: #fefefa;
+  --whitePure: #ffffff;
+  --ifNeedGreen: #70AD47;
 }
 
 body {
-    background-color: var(--backgroundColor);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header header header header header header header header header header header header"
-        "hero hero hero hero hero hero hero hero hero hero hero hero"
-        "ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct"
-        "honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes"
-        "testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials"
-        "orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow"
-        "footer footer footer footer footer footer footer footer footer footer footer footer";
+  background-color: var(--darkestBackground);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "hero hero hero hero hero hero hero hero hero hero hero hero"
+    "ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct ourProduct"
+    "honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes honeyTypes"
+    "testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials"
+    "orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow orderNow"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 /* HEADER STYLING */
 
-header{
-    grid-area: header;
-    position: relative;
-    background-color: transparent;
-    width:100%;
-    padding:1% 2%;
-    z-index: 1;
+header {
+  grid-area: header;
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  padding: 1% 2%;
+  z-index: 1;
 }
-.header-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:100%;
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
 }
 
 
 /* LOGO */
-.logo-container{
-    cursor: pointer;
-    width: 30%;
-    height: 75px;
-}
-.logo-letter{
-     font-family: 'Branch';
-     color:var(--greyForFont);
-     font-size: 2rem;
-     font-weight: 900;
+.logo-container {
+  cursor: pointer;
+  width: 30%;
+  height: 25px;
 }
 
-.logo-letter:hover{
-    
+.logo-letter {
+  font-family: 'Branch';
+  color: var(--greyForFont);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.bee {
+  color: var(--yellowForFont);
 }
 
 /* MENU */
 
-nav{}
-.main-menu{
-    display: flex;
-    flex-direction: row;
-}
-.main-menu_items{}
-.main-menu__item{
-    font-family: 'Muller Thin DEMO';
-    color:var(--greyForFont);
-    font-size:1.5rem;
-    margin-left: 0.7rem;
-    cursor: pointer;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-menu__item:hover{
-    color: var(--yellowForFont);
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main-menu_items {
+  margin-left: 0.7rem;
+}
+
+.main-menu__item {
+  height: 25px;
+  width: fit-content;
+  font-family: 'Muller Thin DEMO';
+  color: var(--whiteForFont);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.main-menu__item::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--yellowForFont);
+  transition: all 0.8s linear;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.main-menu__item:hover::after {
+  transition: all 0.8s linear;
+  transform: scaleX(1);
+  transform-origin: right;
 }
 
 /* HERO SECTION*/
 
-.hero{
-    grid-area: hero;
-    width:100%;
-    height:100vh;
-    position: absolute;
-    background-color: var(--backgroundColor);
-    
+.hero {
+  grid-area: hero;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
 }
 
-.hero-image{
-    position: absolute;
-    width:569px;
-    height:650px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.hero-image {
+  position: absolute;
+  width: 569px;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  cursor: pointer;
 }
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Branch';
+  color: white;
+  width: 85rem;
+  height: 20rem;
+  font-size: 7rem;
+  font-weight: 900rem;
+  letter-spacing: 1rem;
+  z-index: 1;
+}
+
+.slogan {
+  height: 12rem;
+  margin-left: -21%;
+}
+
+.slogan-2 {
+  height: 12rem;
+  padding-left: 35%;
+}
+
+
+
+/* Hex wall stilling */
 
 .hex-row {
-    display: inline-flex;
-    margin-top: -1.75rem;
-    margin-left: -3.05rem;
+  display: inline-flex;
+  margin-top: -1.75rem;
+  margin-left: -3.05rem;
 }
 
 .hexagon {
-    position: relative;
-    background: rgb(16, 14, 14);
-    width: 6.25rem;
-    height: 6.875rem;
-    margin: 0.063rem;
-    transition: 2s;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+  background: rgb(16, 14, 14);
+  width: 6.25rem;
+  height: 6.875rem;
+  margin: 0.063rem;
+  transition: 2s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .hexagon:hover {
-    background: #FFC24B;
-    transition: 0s;
+  background: #FFC24B;
+  transition: 0s;
 }
 
 .hex-row:nth-child(even) {
-    margin-left: 0.063rem;
+  margin-left: 0.063rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* OUR PRODUCT */
 
 .ourProduct {
   grid-area: ourProduct;
+  position: relative;
+  background-color: #ffaa00;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sk-Modernist';
+  color: white;
+  height: 100vh;
+  width: 100%;
 }
+
+.ourProduct-img {
+  height: 550px;
+  width: 450px;
+  margin-right: 5%;
+}
+
+.ourProduct-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 750px;
+  height: 400px;
+}
+
+.ourProduct-title {
+  font-size: 2.5rem;
+  width: 750px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.ourProduct-text {
+  font-size: 1.2rem;
+  width: 750px;
+  height: 350px;
+  line-height: 1.5rem;
+}
+
+.gap {
+  display: block;
+  margin: 5px;
+}
+
+/* HONEY TYPES PRESENTATION */
 
 .honeyTypes {
   grid-area: honeyTypes;
+  position: relative;
+  background-color: #e28b00;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper {
+  position: relative;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%) !important;
+  height: 100%;
+  width: 99%;
+}
+
+.swiper-wrapper {
+  height: 100%;
+  width: 500%;
+}
+
+.swiper-scrollbar,
+.swiper-scrollbar-horizontal {
+  width: 50%;
+  background-color: #ffd20b9f;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #ffd700;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide img {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f6a42077;
+}
+
+.text-conteiner {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  gap: 5%;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 55%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.1px);
+  -webkit-backdrop-filter: blur(10.1px);
+  border: 1px solid rgba(0, 0, 0, 0.31);
+  color: white;
+  font-family: 'Sk-Modernist';
+
+}
+
+.text-wrapper h2 {
+  height: 10%;
+  width: 90%;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+}
+
+.text-wrapper p {
+  align-self: center;
+  height: 80%;
+  width: 90%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.styling-P{
+  font-weight: 700;
+  display: block;
+  margin: 8px 0;
+  text-decoration: underline;
+}
+
+.product {
+  display: flex;
+  width: 40%;
+  height: 100%;
+}
+
+.product img {
+  height: 80%;
+  width: 90%;
+  border-radius: 25px;
+}
+
+/*  */
+
 
 .testimonials {
   grid-area: testimonials;

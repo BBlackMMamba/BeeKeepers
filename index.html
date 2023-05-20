@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css">
@@ -14,22 +19,25 @@
 </head>
 
 <body>
+    <script>
+        AOS.init();
+    </script>
     <header>
         <div class="header-wrapper">
             <div class="logo-container">
-                <span class="logo-letter firstWord">B</span>
-                <span class="logo-letter firstWord">L</span>
-                <span class="logo-letter firstWord">A</span>
-                <span class="logo-letter firstWord">C</span>
-                <span class="logo-letter firstWord">K</span>
-                <span class="logo-letter secondWord">B</span>
-                <span class="logo-letter secondWord">E</span>
-                <span class="logo-letter secondWord">E</span>
-                <span class="logo-letter thirdWord">H</span>
-                <span class="logo-letter thirdWord">O</span>
-                <span class="logo-letter thirdWord">N</span>
-                <span class="logo-letter thirdWord">E</span>
-                <span class="logo-letter thirdWord">Y</span>
+                <span class="logo-letter">B</span>
+                <span class="logo-letter">L</span>
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">C</span>
+                <span class="logo-letter">K</span>
+                <span class="logo-letter bee">B</span>
+                <span class="logo-letter bee">E</span>
+                <span class="logo-letter bee">E</span>
+                <span class="logo-letter">H</span>
+                <span class="logo-letter">O</span>
+                <span class="logo-letter">N</span>
+                <span class="logo-letter">E</span>
+                <span class="logo-letter">Y</span>
             </div>
             <nav>
                 <ul class="main-menu">
@@ -347,14 +355,207 @@
             <div class="hexagon"></div>
         </div>
         <img class="hero-image" src="/pictures/honey_jar.SVG" alt="Honey Jar">
+        <div class="hero-text">
+            <h2 class="slogan">100% British</h2>
+            <h2 class="slogan-2">Raw Honey</h2>
+        </div>
     </section>
-    <section class="ourProduct"></section>
-    <section class="honeyTypes"></section>
+    <section class="ourProduct">
+        <img data-aos="zoom-in" data-aos-delay="50" data-aos-duration="2000" src="/pictures/honey-food.gif" alt="Honey"
+            class="ourProduct-img">
+        <div class="ourProduct-text-container" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="3000">
+            <h2 class="ourProduct-title" data-aos="fade-up" data-aos-duration="1000">Our Honey</h2>
+            <p class="ourProduct-text" data-aos="zoom-in" data-aos-duration="2000">
+                Our honeys are all single source, meaning they come from one place - this location and the name of the
+                beekeeper is printed on every jar. Each jar you buy supports our pollinators - giving back 2% of all
+                sales to create wildflower meadows, a
+                vital habitat for honey bees.
+                <span class="gap"></span>
+                Every jar of honey is carbon neutral. We offset all emissions by supporting a range of projects around
+                the world. Multi-floral honey sourced during the summer months from apiaries in Somerset, Lincolnshire,
+                Northamptonshire and Hertfordshire.
+                <span class="gap"></span>
+                Created by bees from a wonderful mix of wildflowers, this honey has a light golden colour, a runny
+                consistency and a wonderfully rich heady, floral flavour.
+            </p>
+        </div>
+    </section>
+    <section class="honeyTypes">
+        <div class="slider-container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="pictures/alexander-mils-nesUgwNX3u4-unsplash.jpg" alt="">
+                        <div class="text-conteiner">
+                            <div class="text-wrapper">
+                                <h2 class="slider-title">Our Product</h2>
+                                <p class="slider-text">
+                                    Our honeys are all single source, meaning they come from one place - this location
+                                    and the name of the beekeeper is printed on every jar.
+                                    <span class="styling-P"></span>
+                                    Each jar you buy supports our pollinators - giving back 2% of all sales to create
+                                    wildflower meadows, a vital habitat for honey bees.
+                                    <span class="styling-P"></span>
+                                    Every jar of honey is carbon neutral. We offset all emissions by supporting a range
+                                    of projects around the world.
+                                    <span class="styling-P"></span>
+                                    All of our honeys have antimicrobial properties also known as ‘Total Activity’.
+                                    <span class="styling-P"></span>
+                                    As our honey is unprocessed, it can set over time. If it does, warm gently to
+                                    reliquefy.
+                                    <span class="styling-P"></span>
+                                    Unsuitable for babies under 12 months. Store at room temperature.
+                                </p>
+                            </div>
+                            <div class="product">
+                                <img src="pictures/sunflower-honey-product.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="pictures/chinh-le-duc-q98J_eiecHA-unsplash.jpg" alt="">
+                        <div class="text-conteiner">
+                            <div class="text-wrapper">
+                                <h2 class="slider-title">Orchard Honey</h2>
+                                <p class="slider-text">
+                                     <span class="styling-P">Provenance</span>
+                                    Sourced from hives nestled within British orchards during the Spring. From Powys in
+                                    Wales and the Garden of England - Kent.
+
+                                   <span class="styling-P">Flavour Profile</span> 
+                                    The bees collect nectar and pollen from pear and apple trees to create this
+                                    delightful runny honey which has a mildly fruity flavour and a light, golden colour.
+
+                                    <span class="styling-P">Uses</span>
+                                    Try this drizzled on granola, fruit and yoghurt or with fresh lemon to make a
+                                    warming hot drink.
+
+                                    <span class="styling-P">Awards</span>
+                                    Great Taste Award Winner: 1 Star
+
+                                    <span class="styling-P">Size: 227g</span>
+
+                                    <span class="styling-P">Please note:</span>
+                                    Although we have created new labels for this product some jars will arrive with the
+                                    previous design as we make the transition. Your patience and understanding is
+                                    appreciated!</p>
+                            </div>
+                            <div class="product">
+                                <img src="pictures/orchard-honey.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="pictures/ireland-rogers-EBY6Z6367DY-unsplash.jpg" alt="">
+                        <div class="text-conteiner">
+                            <div class="text-wrapper">
+                                <h2 class="slider-title">London Honey</h2>
+                                <p class="slider-text">
+                                    <span class="styling-P">Provenance</span>
+                                    Produced by our very own fair hands from our beloved bees at the East London apiary.
+
+                                    <span class="styling-P">Flavour Profile / Tasting Notes</span>
+                                    The huge variety of plants and trees in the city's parks and gardens gives this
+                                    honey a mind blowing complexity of flavours with undertones of citrus and elegant
+                                    elderflower.
+
+                                    <span class="styling-P">Uses</span>
+                                    On a cheese board, in hot drinks or on yoghurt.
+
+                                    <span class="styling-P">Awards</span>
+                                    Great Taste Award Winner: 3 Stars
+
+                                    <span class="styling-P">Size: 227g</span>
+
+                                    <span class="styling-P">Please note:</span>
+                                    Although we have created new labels for this product some jars will arrive with the
+                                    previous design as we make the transition. Your patience and understanding is
+                                    appreciated!
+                                </p>
+                            </div>
+                            <div class="product">
+                                <img src="pictures/london-honey.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="pictures/jonathan-farber-kO4gbGN0McI-unsplash.jpg" alt="">
+                        <div class="text-conteiner">
+                            <div class="text-wrapper">
+                                <h2 class="slider-title">Seaside Honey</h2>
+                                <p class="slider-text">
+                                    <span class="styling-P">Provenance</span>
+                                    The bees do like to be beside the seaside! A limited edition, rare honey variety
+                                    from hives taken to the salt marshes of the North Norfolk coast where they forage on
+                                    sea lavender.
+
+                                    <span class="styling-P">Flavour Profile / Tasting Notes</span>
+                                    This honey has an incredible, complex salted caramel flavour. Delicious.
+
+                                    <span class="styling-P">Uses</span>
+                                    Drizzle on yoghurt or just eat straight from the jar!
+
+                                    <span class="styling-P">Awards</span>
+                                    Great Taste Award Winner: 2 Stars
+                                    Great British Food Awards Winner 2021
+
+                                    <span class="styling-P">Size: 227g</span>
+
+                                    <span class="styling-P">Please note:</span>
+                                    Although we have created new labels for this product some jars will arrive with the
+                                    previous design as we make the transition. Your patience and understanding is
+                                    appreciated!</p>
+                            </div>
+                            <div class="product">
+                                <img src="pictures/seaside-honey.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="pictures/mae-mu-Mqb0YDRNr7k-unsplash.jpg" alt="">
+                        <div class="text-conteiner">
+                            <div class="text-wrapper">
+                                <h2 class="slider-title">Starflower Honey</h2>
+                                <p class="slider-text">
+                                    <span class="styling-P">Provenance</span>
+                                    Pure British Borage honey, also known as Starflower, this is a limited release honey
+                                    sourced from apiaries in Lincolnshire, Northants and Hertfordshire.
+
+                                   <span class="styling-P">Flavour Profile / Tasting Notes</span>
+                                    Delicate, light, sweet and subtly floral.
+
+                                    <span class="styling-P">Uses</span>
+                                    Perfect for everyday, general use.
+
+                                    <span class="styling-P">Awards</span>
+                                    Great Taste Award Winner: 1 Star
+
+                                    <span class="styling-P">Size: 227g</span>
+
+                                    <span class="styling-P">Please note:</span>
+                                    Although we have created new labels for this product some jars will arrive with the
+                                    previous design as we make the transition. Your patience and understanding is
+                                    appreciated!
+                                </p>
+                            </div>
+                            <div class="product">
+                                <img src="pictures/sunflower-honey.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section>
     <section class="testimonials"></section>
     <section class="orderNow"></section>
     <footer></footer>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
